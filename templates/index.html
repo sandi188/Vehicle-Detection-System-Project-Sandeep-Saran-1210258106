@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5a0bee;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: hwb(0 0% 98% / 0.986);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #ff0303;
+            text-align: center;
+        }
+
+        #video-feed {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #ff0303;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Detection</h1>
+        <h2>Video Feed</h2>
+        <img id="video-feed" src="{{ url_for('video_feed') }}" width="800" height="480">
+        <div class="button-container">
+            <button class="button" onclick="exitVideo()">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        function exitVideo() {
+            window.location.href = "https://www.microsoft.com/en-us/edge";  // Redirect to the Microsoft Edge homepage
+        }
+    </script>
+</body>
+</html>
